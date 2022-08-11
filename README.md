@@ -1,1 +1,1 @@
-# Django_3_by_exaples_book-Blog-Project
+# Django_3_by_examples_book-Blog-Project
