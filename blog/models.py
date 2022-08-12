@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from taggit.managers import TaggableManager
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -22,6 +23,8 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="created")
     updated = models.DateTimeField(auto_now=True, verbose_name="updated")
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
+
+    tags = TaggableManager()
 
     def __str__(self):
         return self.title
